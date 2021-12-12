@@ -1,33 +1,11 @@
-import org.jetbrains.kotlin.cli.jvm.main
-
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
 }
 
 android {
     compileSdk = AppConfig.compileSdk
-
-    defaultConfig {
-        applicationId = AppConfig.applicationId
-        minSdk = AppConfig.minSdk
-        targetSdk = AppConfig.targetSdk
-        versionCode = AppConfig.versionCode
-        versionName = AppConfig.versionName
-
-        testInstrumentationRunner = AppConfig.testInstrumentationRunner
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -55,18 +33,15 @@ android {
 }
 
 dependencies {
-    // Modules
-    Modules.getAll().forEach { module -> implementation(project(module)) }
-
-    // Libraries
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.appCompat)
     implementation(Dependencies.material)
-    implementation(Dependencies.retrofit)
-    dagger()
+    implementation(Dependencies.coroutines)
 
-    // Tests
     testImplementation(TestDependencies.junit)
     androidTestImplementation(TestDependencies.androidxJunit)
     androidTestImplementation(TestDependencies.espresso)
+
+    dagger()
+    room()
 }

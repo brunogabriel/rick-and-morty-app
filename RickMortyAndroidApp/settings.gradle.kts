@@ -1,3 +1,5 @@
 include (":app")
 include(":network")
+include(":data-local")
+include(":shared")
 include(":main")
