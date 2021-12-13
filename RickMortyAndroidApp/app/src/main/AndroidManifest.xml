@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.github.brunogabriel.rickmorty">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".RickMortyApplication"
         android:allowBackup="true"

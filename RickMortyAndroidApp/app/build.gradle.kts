@@ -38,26 +38,35 @@ android {
         jvmTarget = "11"
     }
 
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+
+    // TODO: aplicar em subprojects???
     sourceSets.getByName("main") {
-        java.srcDir("src/main/java")
+        java.srcDir("src/main/kotlin")
         java.srcDirs("src/main/kotlin")
     }
     sourceSets.getByName("test") {
-        java.srcDir("src/test/java")
+        java.srcDir("src/test/kotlin")
         java.srcDir("src/test/kotlin")
     }
 }
 
 dependencies {
     // Modules
-    /** ?? **/
+    Modules.getAll().forEach { module -> implementation(project(module)) }
 
+    // Libraries
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.appCompat)
     implementation(Dependencies.material)
     implementation(Dependencies.retrofit)
     dagger()
+    room()
 
+    // Tests
     testImplementation(TestDependencies.junit)
     androidTestImplementation(TestDependencies.androidxJunit)
     androidTestImplementation(TestDependencies.espresso)
