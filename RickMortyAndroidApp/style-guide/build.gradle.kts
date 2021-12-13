@@ -2,7 +2,6 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
-    id("kotlinx-serialization")
 }
 
 android {
@@ -18,41 +17,27 @@ android {
     }
 
     buildFeatures {
-        dataBinding = true
         viewBinding = true
     }
 
+    // TODO: aplicar em subprojects???
     sourceSets.getByName("main") {
-        java.srcDir("src/main/java")
+        java.srcDir("src/main/kotlin")
         java.srcDirs("src/main/kotlin")
     }
     sourceSets.getByName("test") {
-        java.srcDir("src/test/java")
+        java.srcDir("src/test/kotlin")
         java.srcDir("src/test/kotlin")
     }
-
 }
 
 dependencies {
-    // Modules
     implementation(project(Modules.shared))
-    implementation(project(Modules.dataLocal))
-    implementation(project(Modules.network))
-    implementation(project(Modules.styleGuide))
 
-    // dependencies
-    dagger()
-    room()
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.appCompat)
-    implementation(Dependencies.fragmentKtx)
     implementation(Dependencies.material)
-    implementation(Dependencies.retrofit)
-    implementation(Dependencies.kotlinxSerialization)
-    implementation(Dependencies.coroutines)
+    implementation(Dependencies.picasso)
 
-    // test dependencies
     testImplementation(TestDependencies.junit)
-    androidTestImplementation(TestDependencies.androidxJunit)
-    androidTestImplementation(TestDependencies.espresso)
 }

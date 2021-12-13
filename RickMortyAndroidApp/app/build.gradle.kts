@@ -64,6 +64,7 @@ dependencies {
     implementation(Dependencies.material)
     implementation(Dependencies.retrofit)
     dagger()
+    room()
 
     // Tests
     testImplementation(TestDependencies.junit)

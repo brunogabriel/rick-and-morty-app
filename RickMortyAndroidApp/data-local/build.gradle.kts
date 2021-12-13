@@ -16,11 +16,6 @@ android {
         jvmTarget = "11"
     }
 
-    buildFeatures {
-        dataBinding = true
-        viewBinding = true
-    }
-
     // TODO: aplicar em subprojects???
     sourceSets.getByName("main") {
         java.srcDir("src/main/kotlin")
