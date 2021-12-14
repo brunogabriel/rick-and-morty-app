@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- navigation menu -->
+    <string name="nav_character">Character</string>
+    <string name="nav_location">Location</string>
+    <string name="nav_episode">Episode</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- anothers -->
     <string name="character">Character</string>
 </resources>

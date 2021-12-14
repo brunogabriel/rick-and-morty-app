@@ -17,5 +17,5 @@ object Versions {
     const val coroutines = "1.3.9"
     const val picasso = "2.71828"
     const val room = "2.3.0"
-
+    const val navigation = "2.3.5"
 }

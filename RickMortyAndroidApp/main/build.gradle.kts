@@ -22,6 +22,8 @@ dependencies {
     implementation(Dependencies.retrofit)
     implementation(Dependencies.kotlinxSerialization)
     implementation(Dependencies.coroutines)
+    implementation(Dependencies.navigationUiKtx)
+    implementation(Dependencies.navigationFragmentKtx)
 
     // test dependencies
     testImplementation(TestDependencies.junit)
