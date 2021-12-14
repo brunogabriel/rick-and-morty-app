@@ -20,7 +20,7 @@ import javax.inject.Singleton
         NetworkModule::class,
         DataLocalModule::class,
         SharedModule::class,
-        FakeModule::class
+        SplashModule::class
     ]
 )
 interface AppComponent : AndroidInjector<RickMortyApplication> {

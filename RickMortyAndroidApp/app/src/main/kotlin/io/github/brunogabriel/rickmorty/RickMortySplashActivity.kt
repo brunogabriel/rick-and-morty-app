@@ -5,9 +5,10 @@ import android.os.Bundle
 import dagger.android.DaggerActivity
 import io.github.brunogabriel.rickmorty.main.presentation.activity.MainActivity
 
-class FakeSplashActivity : DaggerActivity() {
+class RickMortySplashActivity : DaggerActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // TODO First Access to show
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
