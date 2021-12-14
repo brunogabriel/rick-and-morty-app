@@ -14,7 +14,8 @@
         android:theme="@style/Theme.RickMortyAndroidApp">
 
         <activity
-            android:name=".FakeSplashActivity"
+            android:name=".RickMortySplashActivity"
+            android:theme="@style/Theme.RickMortySplash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

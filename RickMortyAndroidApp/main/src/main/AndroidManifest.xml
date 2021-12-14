@@ -3,8 +3,9 @@
     package="io.github.brunogabriel.rickmorty.main">
 
     <application>
-        <activity android:name=".presentation.activity.MainActivity">
-        </activity>
+        <activity
+            android:name=".presentation.activity.MainActivity"
+            android:theme="@style/Theme.RickMortyAndroidApp" />
     </application>
 
 </manifest>

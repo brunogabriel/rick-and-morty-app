@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.RickMortyAndroidApp.MaterialCard"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +17,8 @@
             android:id="@+id/characterImage"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:contentDescription="@string/character" />
+            android:contentDescription="@string/character"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/title"
