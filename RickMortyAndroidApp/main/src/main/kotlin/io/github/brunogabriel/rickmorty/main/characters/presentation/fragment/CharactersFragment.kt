@@ -11,6 +11,8 @@ import io.github.brunogabriel.rickmorty.main.characters.presentation.adapter.Cha
 import io.github.brunogabriel.rickmorty.main.characters.presentation.viewmodel.CharacterViewModel
 import io.github.brunogabriel.rickmorty.main.databinding.FragmentCharactersBinding
 import io.github.brunogabriel.rickmorty.network.result.NetworkResult
+import io.github.brunogabriel.rickmorty.shared.extensions.px
+import io.github.brunogabriel.rickmorty.shared.recyclerview.decoration.RecyclerViewGridDecoration
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -49,7 +51,7 @@ class CharactersFragment : DaggerFragment() {
     private fun setupView() {
         with(binding.recyclerView) {
             adapter = recyclerViewAdapter
-            // TODO: Decoration
+            addItemDecoration(RecyclerViewGridDecoration(16.px))
         }
     }
 
