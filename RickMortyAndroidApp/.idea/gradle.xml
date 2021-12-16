@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/data-local" />
             <option value="$PROJECT_DIR$/main" />
             <option value="$PROJECT_DIR$/network" />
+            <option value="$PROJECT_DIR$/onboard" />
             <option value="$PROJECT_DIR$/shared" />
             <option value="$PROJECT_DIR$/style-guide" />
           </set>
