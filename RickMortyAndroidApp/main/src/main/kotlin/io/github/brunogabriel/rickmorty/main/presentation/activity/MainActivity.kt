@@ -20,7 +20,5 @@ class MainActivity : DaggerAppCompatActivity() {
         setSupportActionBar(binding.toolbar)
     }
 
-    private fun setupView() {
-
-    }
+    private fun setupView() {}
 }
