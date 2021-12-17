@@ -9,6 +9,7 @@ dependencies {
     implementation(project(Modules.shared))
     implementation(project(Modules.dataLocal))
     implementation(project(Modules.styleGuide))
+    implementation(project(Modules.deeplink))
 
     // dependencies
     dagger()

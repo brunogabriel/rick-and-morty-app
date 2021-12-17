@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/data-local" />
+            <option value="$PROJECT_DIR$/deeplink" />
             <option value="$PROJECT_DIR$/main" />
             <option value="$PROJECT_DIR$/network" />
             <option value="$PROJECT_DIR$/onboard" />

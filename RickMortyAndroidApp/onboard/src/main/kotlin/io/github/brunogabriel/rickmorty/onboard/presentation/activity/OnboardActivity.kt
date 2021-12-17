@@ -7,11 +7,13 @@ import androidx.core.animation.doOnEnd
 import androidx.core.view.doOnPreDraw
 import androidx.lifecycle.lifecycleScope
 import dagger.android.support.DaggerAppCompatActivity
+import io.github.brunogabriel.rickmorty.deeplink.domain.DeeplinkHandler
 import io.github.brunogabriel.rickmorty.onboard.R
 import io.github.brunogabriel.rickmorty.onboard.databinding.ActivityOnboardBinding
 import io.github.brunogabriel.rickmorty.onboard.presentation.viewmodel.OnboardViewModel
 import io.github.brunogabriel.rickmorty.shared.extensions.fromHtml
 import io.github.brunogabriel.rickmorty.shared.extensions.getLocationOnScreen
+import io.github.brunogabriel.rickmorty.shared.viewmodel.NavigationEvent
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -20,6 +22,9 @@ class OnboardActivity : DaggerAppCompatActivity() {
 
     @Inject
     lateinit var viewModel: OnboardViewModel
+
+    @Inject
+    lateinit var deeplinkHandler: DeeplinkHandler
 
     private lateinit var binding: ActivityOnboardBinding
 
@@ -39,8 +44,16 @@ class OnboardActivity : DaggerAppCompatActivity() {
     private fun listenEvents() {
         lifecycleScope.launch {
             viewModel.deeplinkEvent.collect { event ->
-                event?.let {
-                    // TODO: deeplink handler
+                when (event) {
+                    is NavigationEvent.Deeplink -> {
+                        deeplinkHandler.process(event.deeplink)?.let {
+                            startActivity(it)
+                            finish()
+                        }
+                    }
+                    is NavigationEvent.Url -> {
+                        // TODO:
+                    }
                 }
             }
         }
