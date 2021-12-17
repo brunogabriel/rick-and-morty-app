@@ -7,6 +7,10 @@ object Dependencies {
     // UI
     const val material = "com.google.android.material:material:${Versions.material}"
     const val picasso = "com.squareup.picasso:picasso:${Versions.picasso}"
+    const val constraintLayout =
+        "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val dynamicAnimation =
+        "androidx.dynamicanimation:dynamicanimation-ktx:${Versions.dynamicAnimation}"
 
     // Dagger
     const val dagger = "com.google.dagger:dagger:${Versions.dagger}"

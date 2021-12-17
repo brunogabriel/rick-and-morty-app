@@ -18,4 +18,6 @@ object Versions {
     const val picasso = "2.71828"
     const val room = "2.3.0"
     const val navigation = "2.3.5"
+    const val constraintLayout = "2.1.2"
+    const val dynamicAnimation = "1.0.0-alpha03"
 }

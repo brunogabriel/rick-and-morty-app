@@ -11,6 +11,7 @@ dependencies {
     implementation(project(Modules.dataLocal))
     implementation(project(Modules.network))
     implementation(project(Modules.styleGuide))
+    implementation(project(Modules.deeplink))
 
     // dependencies
     dagger()

@@ -4,6 +4,14 @@
         <item name="android:windowBackground">@drawable/background_splash</item>
         <item name="android:statusBarColor">@color/appColorSplash</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <!--        <item name="colorPrimary">@color/appColorPositive</item>-->
+        <!--        <item name="colorAccent">@color/appColorPositive</item>-->
+    </style>
+
+    <style name="Theme.RickMortyFirstAccess" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="android:windowBackground">@color/appColorSplash</item>
+        <item name="android:statusBarColor">@color/appColorSplash</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
 
     <style name="Theme.RickMortyAndroidApp" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">

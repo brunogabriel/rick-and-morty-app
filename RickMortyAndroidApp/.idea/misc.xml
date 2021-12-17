@@ -3,12 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bruno/.gradle/caches/transforms-3/48a8a766213d9fa89ef4f0d0a78f9405/transformed/appcompat-1.4.0/res/drawable/abc_btn_default_mtrl_shape.xml" value="0.14322916666666666" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/app/src/main/res/drawable/background_splash.xml" value="0.11481481481481481" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/app/src/main/res/layout/activity_main.xml" value="0.1598731884057971" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/app/src/main/res/layout/activity_rick_morty_splash.xml" value="0.1598731884057971" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/main/src/main/res/layout/activity_main.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/main/src/main/res/layout/fragment_characteres.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/main/src/main/res/menu/navigation_menu.xml" value="0.25" />
+        <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/onboard/src/main/res/layout/activity_onboard.xml" value="0.264" />
+        <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/onboard/src/main/res/xml/onboard_scene.xml" value="0.1598731884057971" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/drawable-xxxhdpi/asasa.xml" value="0.11481481481481481" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/drawable/background_splash.xml" value="0.11481481481481481" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/drawable/ic_bug.xml" value="0.11481481481481481" />
