@@ -4,8 +4,6 @@
         <item name="android:windowBackground">@drawable/background_splash</item>
         <item name="android:statusBarColor">@color/appColorSplash</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
-        <!--        <item name="colorPrimary">@color/appColorPositive</item>-->
-        <!--        <item name="colorAccent">@color/appColorPositive</item>-->
     </style>
 
     <style name="Theme.RickMortyFirstAccess" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
@@ -30,13 +28,12 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
-        <!-- Customize your theme here. -->
+
+        <!-- Bottom Navigation -->
+        <item name="bottomNavigationStyle">@style/Theme.RickMortyAndroidApp.BottomNavigationView
+        </item>
+
+        <!-- Toolbar -->
+        <item name="toolbarStyle">@style/Theme.RickMortyAndroidApp.Toolbar.Light</item>
     </style>
-
-    <style name="Theme.RickMortyAndroidApp.MaterialCard" parent="Widget.MaterialComponents.CardView">
-        <item name="strokeColor">@color/appColorGray6</item>
-        <item name="cardElevation">1dp</item>
-    </style>
-
-
 </resources>

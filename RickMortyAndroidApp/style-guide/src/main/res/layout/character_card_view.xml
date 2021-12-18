@@ -22,6 +22,7 @@
 
         <TextView
             android:id="@+id/title"
+            style="@style/Theme.RickMortyAndroidApp.Caption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -29,21 +30,20 @@
             android:layout_marginEnd="16dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="12sp"
+            android:textColor="@color/appColorAdditional"
             tools:text="Alive" />
 
         <TextView
             android:id="@+id/content"
+            style="@style/Theme.RickMortyAndroidApp.Heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:text="Alive" />
+            android:textColor="@color/appColorBlack"
+            tools:text="Rick Sanchez" />
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
