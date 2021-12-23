@@ -25,6 +25,8 @@ dependencies {
     implementation(Dependencies.coroutines)
     implementation(Dependencies.navigationUiKtx)
     implementation(Dependencies.navigationFragmentKtx)
+    implementation(Dependencies.shimmer)
+    implementation(Dependencies.lottie)
 
     // test dependencies
     testImplementation(TestDependencies.junit)

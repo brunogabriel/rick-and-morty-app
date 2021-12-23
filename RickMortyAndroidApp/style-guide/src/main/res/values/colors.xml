@@ -11,6 +11,7 @@
     <color name="appColorPrimary">#5856D6</color>
     <color name="appColorGray">#C7C7CC</color>
     <color name="appColorBlack">#081F32</color>
+    <color name="appColorAdditional">#6E798C</color>
     <color name="appColorWhite">#FFFFFF</color>
     <color name="appColorGray1">#8E8E93</color>
     <color name="appColorGray2">#AEAEB2</color>
@@ -21,4 +22,5 @@
     <color name="appColorPositive">#34C759</color>
     <color name="appColorNegative">#FF3B30</color>
     <color name="appColorSplash">#1A2228</color>
+    <color name="appColorShimmer">@color/appColorGray2</color>
 </resources>
