@@ -12,7 +12,7 @@ interface CharacterDao {
         offset: Int
     ): List<CharacterEntity>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(entities: List<CharacterEntity>)
 
     @Delete

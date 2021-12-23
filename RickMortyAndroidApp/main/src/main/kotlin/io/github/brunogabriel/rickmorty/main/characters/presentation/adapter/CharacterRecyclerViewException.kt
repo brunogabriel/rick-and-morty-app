@@ -1,3 +1,3 @@
 package io.github.brunogabriel.rickmorty.main.characters.presentation.adapter
 
-class CharacterRecyclerVIewException(cause: String) : Exception(cause)
+class CharacterRecyclerViewException(cause: String) : Exception(cause)

@@ -11,6 +11,8 @@ object Dependencies {
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val dynamicAnimation =
         "androidx.dynamicanimation:dynamicanimation-ktx:${Versions.dynamicAnimation}"
+    const val shimmer = "com.facebook.shimmer:shimmer:${Versions.shimmer}"
+    const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
 
     // Dagger
     const val dagger = "com.google.dagger:dagger:${Versions.dagger}"

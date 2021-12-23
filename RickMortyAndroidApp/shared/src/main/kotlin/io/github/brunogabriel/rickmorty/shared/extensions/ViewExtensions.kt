@@ -8,3 +8,11 @@ fun View.getLocationOnScreen(): Point {
     getLocationOnScreen(coordinates)
     return Point(coordinates[0], coordinates[1])
 }
+
+fun View.show() {
+    visibility = View.VISIBLE
+}
+
+fun View.hide() {
+    visibility = View.GONE
+}

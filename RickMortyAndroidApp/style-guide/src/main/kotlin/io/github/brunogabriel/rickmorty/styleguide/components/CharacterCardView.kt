@@ -13,6 +13,7 @@ class CharacterCardView @JvmOverloads constructor(
     attributeSet: AttributeSet? = null,
     style: Int = R.style.Theme_RickMortyAndroidApp_MaterialCard
 ) : MaterialCardView(context, attributeSet, style) {
+
     private val binding: CharacterCardViewBinding =
         CharacterCardViewBinding.inflate(
             LayoutInflater.from(context),
