@@ -14,4 +14,8 @@
 
     <!-- anothers -->
     <string name="character">Character</string>
+
+    <!-- try again -->
+    <string name="try_again">Try again</string>
+    <string name="try_again_content">Oops…we have something wrong</string>
 </resources>

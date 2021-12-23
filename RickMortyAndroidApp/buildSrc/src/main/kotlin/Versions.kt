@@ -20,4 +20,6 @@ object Versions {
     const val navigation = "2.3.5"
     const val constraintLayout = "2.1.2"
     const val dynamicAnimation = "1.0.0-alpha03"
+    const val shimmer = "0.5.0"
+    const val lottie = "4.2.2"
 }

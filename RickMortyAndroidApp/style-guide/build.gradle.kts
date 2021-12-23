@@ -11,6 +11,8 @@ dependencies {
     implementation(Dependencies.appCompat)
     implementation(Dependencies.material)
     implementation(Dependencies.picasso)
+    implementation(Dependencies.shimmer)
+    implementation(Dependencies.lottie)
 
     testImplementation(TestDependencies.junit)
 }

@@ -22,4 +22,5 @@
     <color name="appColorPositive">#34C759</color>
     <color name="appColorNegative">#FF3B30</color>
     <color name="appColorSplash">#1A2228</color>
+    <color name="appColorShimmer">@color/appColorGray2</color>
 </resources>
