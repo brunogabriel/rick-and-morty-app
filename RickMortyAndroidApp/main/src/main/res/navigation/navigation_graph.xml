@@ -11,4 +11,10 @@
         android:label="@string/nav_character"
         tools:layout="@layout/fragment_characters" />
 
+    <fragment
+        android:id="@+id/locationsFragment"
+        android:name="io.github.brunogabriel.rickmorty.main.locations.presentation.fragment.LocationsFragment"
+        android:label="@string/nav_location"
+        tools:layout="@layout/fragment_locations" />
+
 </navigation>

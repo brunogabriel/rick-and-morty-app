@@ -6,6 +6,7 @@ import dagger.Module
 import dagger.Provides
 import io.github.brunogabriel.rickmorty.datalocal.data.ApplicationDatabase
 import io.github.brunogabriel.rickmorty.datalocal.data.CharacterDao
+import io.github.brunogabriel.rickmorty.datalocal.data.LocationDao
 import javax.inject.Singleton
 
 @Module
@@ -20,5 +21,9 @@ abstract class DataLocalModule {
         @Provides
         fun providesCharacterDao(database: ApplicationDatabase): CharacterDao =
             database.characterDao()
+
+        @Provides
+        fun providesLocationDao(database: ApplicationDatabase): LocationDao =
+            database.LocationDao()
     }
 }

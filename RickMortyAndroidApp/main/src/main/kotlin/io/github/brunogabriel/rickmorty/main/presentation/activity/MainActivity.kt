@@ -3,6 +3,7 @@ package io.github.brunogabriel.rickmorty.main.presentation.activity
 import android.os.Bundle
 import androidx.navigation.*
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import dagger.android.support.DaggerAppCompatActivity
 import io.github.brunogabriel.rickmorty.main.R
 import io.github.brunogabriel.rickmorty.main.databinding.ActivityMainBinding
@@ -23,6 +24,7 @@ class MainActivity : DaggerAppCompatActivity() {
         NavController.OnDestinationChangedListener { _, destination, _ ->
             val title = when (destination.id) {
                 R.id.characterFragment -> getString(R.string.nav_character)
+                R.id.locationsFragment -> getString(R.string.nav_location)
                 else -> ""
             }
             supportActionBar?.title = title
@@ -34,6 +36,7 @@ class MainActivity : DaggerAppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupToolbar()
+        setupBottomNavigation()
     }
 
     override fun onPause() {
@@ -50,4 +53,8 @@ class MainActivity : DaggerAppCompatActivity() {
         setSupportActionBar(binding.toolbar)
     }
 
+    private fun setupBottomNavigation() {
+        binding.bottomNavigation.setupWithNavController(navController)
+    }
+    
 }

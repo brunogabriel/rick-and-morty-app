@@ -4,6 +4,5 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 class CharactersListResponse(
-    val info: CharacterInfoResponse,
     val results: List<CharacterResponse>
 )
