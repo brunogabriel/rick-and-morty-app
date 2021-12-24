@@ -12,13 +12,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/characterImage"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:contentDescription="@string/character"
-            android:scaleType="centerCrop" />
-
         <TextView
             android:id="@+id/title"
             style="@style/Theme.RickMortyAndroidApp.Caption"
@@ -31,7 +24,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:textColor="@color/appColorAdditional"
-            tools:text="Alive" />
+            tools:text="Planet" />
 
         <TextView
             android:id="@+id/content"
@@ -41,9 +34,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:maxLines="1"
+            android:maxLines="2"
+            android:minLines="2"
             android:textColor="@color/appColorBlack"
-            tools:text="Rick Sanchez" />
+            tools:text="Mr. Goldenfold's\ndream" />
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

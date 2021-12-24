@@ -1,7 +1,7 @@
 package io.github.brunogabriel.rickmorty.main.characters.domain
 
 import io.github.brunogabriel.rickmorty.main.characters.data.CharacterRepository
-import io.github.brunogabriel.rickmorty.main.characters.domain.mapper.characterResponseToVO
+import io.github.brunogabriel.rickmorty.main.characters.domain.mapper.characterEntityToVO
 import io.github.brunogabriel.rickmorty.main.characters.domain.models.CharacterVO
 import javax.inject.Inject
 
@@ -14,6 +14,6 @@ internal class CharactersUseCaseImpl @Inject constructor(
 ) : CharactersUseCase {
     override suspend fun fetchAll(page: Int, forceRefresh: Boolean): List<CharacterVO> {
         return repository.getCharacters(page, forceRefresh)
-            .map(::characterResponseToVO)
+            .map(::characterEntityToVO)
     }
 }
