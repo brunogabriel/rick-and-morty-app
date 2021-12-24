@@ -3,7 +3,7 @@ package io.github.brunogabriel.rickmorty.main.characters.domain.mapper
 import io.github.brunogabriel.rickmorty.datalocal.data.models.CharacterEntity
 import io.github.brunogabriel.rickmorty.main.characters.domain.models.CharacterVO
 
-fun characterResponseToVO(
+fun characterEntityToVO(
     entity: CharacterEntity
 ) = CharacterVO(
     id = entity.id,

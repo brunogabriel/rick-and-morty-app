@@ -7,6 +7,7 @@ import dagger.multibindings.IntoSet
 import io.github.brunogabriel.rickmorty.deeplink.domain.DeeplinkProcessor
 import io.github.brunogabriel.rickmorty.main.characters.di.CharactersModule
 import io.github.brunogabriel.rickmorty.main.deeplink.MainDeeplinkProcessor
+import io.github.brunogabriel.rickmorty.main.locations.di.LocationsModule
 import io.github.brunogabriel.rickmorty.main.presentation.activity.MainActivity
 import javax.inject.Singleton
 
@@ -14,6 +15,7 @@ import javax.inject.Singleton
     includes = [
         MainActivityModule::class,
         CharactersModule::class,
+        LocationsModule::class,
         MainDeeplinkModule::class
     ]
 )

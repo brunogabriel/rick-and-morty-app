@@ -11,6 +11,7 @@ internal class CharacterRepositoryImpl @Inject constructor(
     private val service: CharacterService,
     private val characterDao: CharacterDao
 ) : CharacterRepository {
+
     override suspend fun getCharacters(page: Int, forceRefresh: Boolean): List<CharacterEntity> {
         return if (forceRefresh) {
             fetchFromService(page)
