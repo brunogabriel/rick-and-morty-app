@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/onboard" />
             <option value="$PROJECT_DIR$/shared" />
             <option value="$PROJECT_DIR$/style-guide" />
+            <option value="$PROJECT_DIR$/testing" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

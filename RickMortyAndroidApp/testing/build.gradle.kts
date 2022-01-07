@@ -1,14 +1,11 @@
 dependencies {
-    implementation(project(Modules.testing))
+    // dependencies
+    room()
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.appCompat)
-    implementation(Dependencies.material)
     implementation(Dependencies.coroutines)
-    implementation(Dependencies.kotlinxSerialization)
 
-    dagger()
-    room()
-
+    // test dependencies
     unitTest()
     instrumentalTest()
 }
