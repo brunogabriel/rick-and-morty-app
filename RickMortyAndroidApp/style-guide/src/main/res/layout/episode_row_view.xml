@@ -37,20 +37,19 @@
 
         <TextView
             android:id="@+id/titleText"
-            android:layout_marginTop="1dp"
             style="@style/Theme.RickMortyAndroidApp.Caption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAllCaps="true"
+            android:layout_marginTop="1dp"
             android:textColor="@color/appColorAdditional"
             tools:text="Rick Potion #9" />
 
         <TextView
             android:id="@+id/releaseText"
-            android:layout_marginTop="1dp"
             style="@style/Theme.RickMortyAndroidApp.Caption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
             android:textAllCaps="true"
             android:textColor="@color/appColorAdditional"
             tools:text="August 4, 2022" />
