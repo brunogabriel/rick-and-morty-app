@@ -4,7 +4,6 @@
     <string name="nav_character">Character</string>
     <string name="nav_location">Location</string>
     <string name="nav_episode">Episode</string>
-    <string name="nav_settings">Settings</string>
 
     <!-- onboard -->
     <string name="onboard_logo_description">Logo</string>
