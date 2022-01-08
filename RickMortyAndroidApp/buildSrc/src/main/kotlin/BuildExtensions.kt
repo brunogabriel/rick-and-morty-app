@@ -22,5 +22,17 @@ fun DependencyHandler.room() {
     add("implementation", Dependencies.room)
     add("kapt", Dependencies.roomAnnotationProcessor)
     add("implementation", Dependencies.roomKtx)
+}
 
+fun DependencyHandler.unitTest() {
+    add("testImplementation", TestDependencies.junit)
+    add("testImplementation", TestDependencies.truth)
+}
+
+fun DependencyHandler.instrumentalTest() {
+    add("androidTestImplementation", TestDependencies.androidxJunit)
+    add("androidTestImplementation", TestDependencies.espresso)
+    add("androidTestImplementation", TestDependencies.truth)
+    add("androidTestImplementation", TestDependencies.coreTesting)
+    add("androidTestImplementation", TestDependencies.coroutinesTest)
 }
