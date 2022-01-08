@@ -14,5 +14,4 @@ class LoadingView @JvmOverloads constructor(
     private val binding: LoadingViewBinding =
         LoadingViewBinding.inflate(LayoutInflater.from(context), this, true)
 
-
 }

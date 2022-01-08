@@ -13,6 +13,7 @@ import io.github.brunogabriel.rickmorty.onboard.databinding.ActivityOnboardBindi
 import io.github.brunogabriel.rickmorty.onboard.presentation.viewmodel.OnboardViewModel
 import io.github.brunogabriel.rickmorty.shared.extensions.fromHtml
 import io.github.brunogabriel.rickmorty.shared.extensions.getLocationOnScreen
+import io.github.brunogabriel.rickmorty.shared.extensions.openUrl
 import io.github.brunogabriel.rickmorty.shared.viewmodel.NavigationEvent
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -52,7 +53,7 @@ class OnboardActivity : DaggerAppCompatActivity() {
                         }
                     }
                     is NavigationEvent.Url -> {
-                        // TODO:
+                        openUrl(event.url)
                     }
                 }
             }

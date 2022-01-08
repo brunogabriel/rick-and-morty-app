@@ -11,6 +11,7 @@ dependencies {
     implementation(Dependencies.material)
     implementation(Dependencies.coroutines)
     implementation(Dependencies.picasso)
+    implementation(Dependencies.kotlinxSerialization)
 
     testImplementation(TestDependencies.junit)
     androidTestImplementation(TestDependencies.androidxJunit)

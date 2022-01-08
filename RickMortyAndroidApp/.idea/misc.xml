@@ -10,6 +10,7 @@
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/main/src/main/res/layout/activity_main.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/main/src/main/res/layout/fragment_characteres.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/main/src/main/res/layout/fragment_characters.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/main/src/main/res/layout/fragment_episodes.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/main/src/main/res/layout/fragment_locations.xml" value="0.1802536231884058" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/main/src/main/res/menu/navigation_menu.xml" value="0.25" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/onboard/src/main/res/layout/activity_onboard.xml" value="0.264" />
@@ -17,15 +18,22 @@
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/drawable-xxxhdpi/asasa.xml" value="0.11481481481481481" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/drawable/background_splash.xml" value="0.11481481481481481" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/drawable/bottom_navigation_selector.xml" value="0.13425925925925927" />
+        <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/drawable/ic_baseline_chevron_right.xml" value="0.125" />
+        <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/drawable/ic_baseline_live_tv.xml" value="0.125" />
+        <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/drawable/ic_baseline_map.xml" value="0.125" />
+        <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/drawable/ic_baseline_person.xml" value="0.125" />
+        <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/drawable/ic_baseline_settings.xml" value="0.125" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/drawable/ic_bug.xml" value="0.11481481481481481" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/layout/character_card.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/layout/character_card_loading_view.xml" value="0.20018115942028986" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/layout/character_card_view.xml" value="0.264" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/layout/character_single_card_shimmer_view.xml" value="0.20018115942028986" />
+        <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/layout/episode_row_view.xml" value="0.4" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/layout/loading_view.xml" value="0.1875" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/layout/location_card_view.xml" value="0.264" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/layout/shimmer_character_card_view.xml" value="0.20018115942028986" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/layout/shimmer_placeholder_character_card_view.xml" value="0.25" />
+        <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/layout/shimmer_placeholder_episode_row_view.xml" value="0.264" />
         <entry key="..\:/Users/bruno/Documents/workspace/rick-and-morty-app/RickMortyAndroidApp/style-guide/src/main/res/layout/try_again_view.xml" value="0.4" />
       </map>
     </option>

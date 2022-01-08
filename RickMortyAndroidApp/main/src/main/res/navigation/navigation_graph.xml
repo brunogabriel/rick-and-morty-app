@@ -17,4 +17,10 @@
         android:label="@string/nav_location"
         tools:layout="@layout/fragment_locations" />
 
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="io.github.brunogabriel.rickmorty.main.episodes.presentation.fragment.EpisodesFragment"
+        android:label="@string/nav_location"
+        tools:layout="@layout/fragment_episodes" />
+
 </navigation>
