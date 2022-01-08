@@ -9,6 +9,8 @@ import dagger.multibindings.IntoMap
 import io.github.brunogabriel.rickmorty.main.episodes.data.EpisodeRepositoryImpl
 import io.github.brunogabriel.rickmorty.main.episodes.data.EpisodesRepository
 import io.github.brunogabriel.rickmorty.main.episodes.data.service.EpisodesService
+import io.github.brunogabriel.rickmorty.main.episodes.domain.EpisodeSeasonBuilder
+import io.github.brunogabriel.rickmorty.main.episodes.domain.EpisodeSeasonBuilderImpl
 import io.github.brunogabriel.rickmorty.main.episodes.domain.EpisodesUseCase
 import io.github.brunogabriel.rickmorty.main.episodes.domain.EpisodesUseCaseImpl
 import io.github.brunogabriel.rickmorty.main.episodes.presentation.fragment.EpisodesFragment
@@ -52,6 +54,9 @@ internal abstract class EpisodesDependenciesModule {
 
     @Binds
     abstract fun bindRepository(repository: EpisodeRepositoryImpl): EpisodesRepository
+
+    @Binds
+    abstract fun bindSeasonBuilder(builder: EpisodeSeasonBuilderImpl): EpisodeSeasonBuilder
 
     companion object {
         @Provides

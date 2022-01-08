@@ -2,6 +2,7 @@ package io.github.brunogabriel.rickmorty.main.episodes.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import io.github.brunogabriel.rickmorty.main.episodes.domain.EpisodeSeasonBuilder
 import io.github.brunogabriel.rickmorty.main.episodes.domain.EpisodesUseCase
 import io.github.brunogabriel.rickmorty.main.episodes.domain.models.EpisodeVO
 import io.github.brunogabriel.rickmorty.network.result.NetworkResult
@@ -17,10 +18,11 @@ import javax.inject.Inject
 
 class EpisodeViewModel @Inject constructor(
     private val useCase: EpisodesUseCase,
+    private val seasonBuilder: EpisodeSeasonBuilder,
     private val appDispatchers: AppDispatchers
 ) : ViewModel() {
 
-    val episodeResult = MutableStateFlow<NetworkResult<List<EpisodeVO>>>(
+    val episodeResult = MutableStateFlow<NetworkResult<List<Any>>>(
         NetworkResult.None
     )
 
@@ -29,7 +31,7 @@ class EpisodeViewModel @Inject constructor(
             episodeResult.value = NetworkResult.Loading
             try {
                 val response = withContext(appDispatchers.io) {
-                    useCase.fetchAll(page, false)
+                    seasonBuilder.addSeason(useCase.fetchAll(page, false))
                 }
                 episodeResult.value = NetworkResult.Success(response)
             } catch (exception: Exception) {

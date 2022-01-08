@@ -8,7 +8,6 @@ import io.github.brunogabriel.rickmorty.onboard.presentation.activity.OnboardAct
 class RickMortySplashActivity : DaggerActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // TODO First Access to show
         startActivity(Intent(this, OnboardActivity::class.java))
         finish()
     }
