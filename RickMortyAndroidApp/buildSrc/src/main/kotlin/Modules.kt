@@ -6,6 +6,7 @@ object Modules {
     const val styleGuide = ":style-guide"
     const val onboard = ":onboard"
     const val deeplink = ":deeplink"
+    const val testing = ":testing"
 
     fun getAll() = listOf(
         main,
@@ -14,6 +15,7 @@ object Modules {
         dataLocal,
         styleGuide,
         onboard,
-        deeplink
+        deeplink,
+        testing
     )
 }
