@@ -13,10 +13,15 @@ class OnboardViewModel @Inject constructor() : ViewModel() {
     internal val deeplinkEvent = MutableStateFlow<NavigationEvent?>(null)
 
     fun showProject() {
-        deeplinkEvent.value = NavigationEvent.Deeplink("project")
+        deeplinkEvent.value =
+            NavigationEvent.Url(PROJECT_URL)
     }
 
     fun showMain() {
         deeplinkEvent.value = NavigationEvent.Deeplink(DeeplinkConstants.MAIN)
+    }
+
+    companion object {
+        private const val PROJECT_URL = "https://github.com/brunogabriel/rick-and-morty-app"
     }
 }

@@ -13,14 +13,8 @@
         android:title="@string/nav_location" />
 
     <item
-        android:id="@+id/episode"
+        android:id="@+id/episodesFragment"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_live_tv"
         android:title="@string/nav_episode" />
-
-    <item
-        android:id="@+id/settings"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_settings"
-        android:title="@string/nav_settings" />
 </menu>

@@ -1,8 +1,8 @@
 package io.github.brunogabriel.rickmorty.main.presentation.activity
 
 import android.os.Bundle
-import androidx.navigation.*
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.NavController
+import androidx.navigation.NavHost
 import androidx.navigation.ui.setupWithNavController
 import dagger.android.support.DaggerAppCompatActivity
 import io.github.brunogabriel.rickmorty.main.R
@@ -25,6 +25,7 @@ class MainActivity : DaggerAppCompatActivity() {
             val title = when (destination.id) {
                 R.id.characterFragment -> getString(R.string.nav_character)
                 R.id.locationsFragment -> getString(R.string.nav_location)
+                R.id.episodesFragment -> getString(R.string.nav_episode)
                 else -> ""
             }
             supportActionBar?.title = title
@@ -56,5 +57,5 @@ class MainActivity : DaggerAppCompatActivity() {
     private fun setupBottomNavigation() {
         binding.bottomNavigation.setupWithNavController(navController)
     }
-    
+
 }

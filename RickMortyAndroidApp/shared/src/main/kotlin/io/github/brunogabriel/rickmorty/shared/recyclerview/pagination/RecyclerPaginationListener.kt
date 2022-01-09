@@ -1,10 +1,11 @@
 package io.github.brunogabriel.rickmorty.shared.recyclerview.pagination
 
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerPaginationListener(
-    private val layoutManager: GridLayoutManager,
+    private val layoutManager: LinearLayoutManager,
     private val paginationReached: () -> Unit
 ) : RecyclerView.OnScrollListener() {
 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="8dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/rightChevron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_baseline_chevron_right"
+        android:tint="@color/appColorGray" />
+
+    <LinearLayout
+        android:id="@+id/textsContentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/rightChevron"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/episodeSeasonText"
+            style="@style/Theme.RickMortyAndroidApp.Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textColor="@color/appColorBlack"
+            tools:text="S01E01" />
+
+        <TextView
+            android:id="@+id/titleText"
+            style="@style/Theme.RickMortyAndroidApp.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:textColor="@color/appColorAdditional"
+            tools:text="Rick Potion #9" />
+
+        <TextView
+            android:id="@+id/releaseText"
+            style="@style/Theme.RickMortyAndroidApp.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:textAllCaps="true"
+            android:textColor="@color/appColorAdditional"
+            tools:text="August 4, 2022" />
+    </LinearLayout>
+
+</RelativeLayout>
