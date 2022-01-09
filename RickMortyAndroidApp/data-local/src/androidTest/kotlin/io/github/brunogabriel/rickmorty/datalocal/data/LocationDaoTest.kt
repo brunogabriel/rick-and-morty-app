@@ -3,7 +3,7 @@ package io.github.brunogabriel.rickmorty.datalocal.data
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.MediumTest
 import com.google.common.truth.Truth.assertThat
-import io.github.brunogabriel.rickmorty.datalocal.data.models.CharacterEntity
+import io.github.brunogabriel.rickmorty.datalocal.data.models.LocationEntity
 import io.github.brunogabriel.rickmorty.datalocal.testing.DataBaseTesting
 import kotlinx.coroutines.runBlocking
 import org.junit.After
@@ -13,14 +13,14 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 @MediumTest
-class CharacterDaoTest : DataBaseTesting() {
+class LocationDaoTest : DataBaseTesting() {
 
-    private lateinit var dao: CharacterDao
+    private lateinit var dao: LocationDao
 
     @Before
     override fun setUp() {
         super.setUp()
-        dao = database.characterDao()
+        dao = database.locationDao()
     }
 
     @After
@@ -48,48 +48,12 @@ class CharacterDaoTest : DataBaseTesting() {
             .isEmpty()
     }
 
-    @Test
-    fun shouldDeleteEntity() = runBlocking {
-        // given
-        val entities = listOf(createEntity(1))
-        dao.insertAll(entities)
-
-        // when
-        assertThat(dao.getEntities(limit = 10, offset = 0))
-            .isNotEmpty()
-
-        dao.delete(entities.first())
-
-        // then
-        assertThat(dao.getEntities(limit = 10, offset = 0))
-            .isEmpty()
-    }
-
-    @Test
-    fun shouldUpdateEntity() = runBlocking {
-        // given
-        val entities = listOf(createEntity(1))
-        val customEntity = entities.first().copy(name = "Bruno")
-        dao.insertAll(entities)
-
-        // when
-        assertThat(dao.getEntities(limit = 10, offset = 0))
-            .isNotEmpty()
-
-        dao.update(customEntity)
-
-        // then
-        assertThat(dao.getEntities(limit = 10, offset = 0))
-            .contains(customEntity)
-    }
-
     private fun createEntity(id: Int) =
-        CharacterEntity(
+        LocationEntity(
             id = id,
             name = "name$id",
-            status = "status$id",
             type = "type$id",
-            gender = "gender$id",
-            image = "image$id"
+            dimension = "dimension$id",
+            residents = (0..id).map { it.toString() }
         )
 }

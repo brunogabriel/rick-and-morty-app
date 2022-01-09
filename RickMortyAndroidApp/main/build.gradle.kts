@@ -29,7 +29,5 @@ dependencies {
     implementation(Dependencies.lottie)
 
     // test dependencies
-    testImplementation(TestDependencies.junit)
-    androidTestImplementation(TestDependencies.androidxJunit)
-    androidTestImplementation(TestDependencies.espresso)
+    unitTest()
 }

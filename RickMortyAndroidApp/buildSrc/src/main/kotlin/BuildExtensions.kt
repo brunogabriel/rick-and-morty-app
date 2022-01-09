@@ -27,6 +27,7 @@ fun DependencyHandler.room() {
 fun DependencyHandler.unitTest() {
     add("testImplementation", TestDependencies.junit)
     add("testImplementation", TestDependencies.truth)
+    add("testImplementation", TestDependencies.mockk)
 }
 
 fun DependencyHandler.instrumentalTest() {

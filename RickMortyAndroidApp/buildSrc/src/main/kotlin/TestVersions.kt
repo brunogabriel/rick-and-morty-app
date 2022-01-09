@@ -5,4 +5,5 @@ object TestVersions {
     const val truth = "1.1.3"
     const val coreTesting = "2.1.0"
     const val coroutinesTest = "1.6.0"
+    const val mockk = "1.12.2"
 }
