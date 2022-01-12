@@ -4,8 +4,7 @@ dependencies {
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.appCompat)
     implementation(Dependencies.coroutines)
-
-    // test dependencies
-    unitTest()
-    instrumentalTest()
+    implementation(TestDependencies.junit)
+    implementation(TestDependencies.coreTesting)
+    implementation(TestDependencies.coroutinesTest)
 }
