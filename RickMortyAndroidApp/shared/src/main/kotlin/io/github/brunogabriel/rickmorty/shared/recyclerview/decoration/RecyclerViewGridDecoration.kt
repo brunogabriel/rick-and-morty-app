@@ -15,7 +15,6 @@ class RecyclerViewGridDecoration(
     ) {
         super.getItemOffsets(outRect, view, parent, state)
         val position = parent.getChildAdapterPosition(view)
-        val lastRow = parent.childCount > 0 && position >= parent.childCount - 2
         with(outRect) {
             if (position % 2 == 0) {
                 left = margin
