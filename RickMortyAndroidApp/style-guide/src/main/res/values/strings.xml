@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- navigation menu -->
+    <string name="nav_character">Character</string>
+    <string name="nav_location">Location</string>
+    <string name="nav_episode">Episode</string>
+
+    <!-- onboard -->
+    <string name="onboard_logo_description">Logo</string>
+    <string name="onboard_visit_project">Visit project</string>
+    <string name="onboard_start_app">Start app</string>
+    <string name="onboard_develop_message"><![CDATA[<b>Welcome</b><br/><br/>This is an open source project. Check it out, <b>visit project</b>.]]></string>
+
+    <!-- anothers -->
+    <string name="character">Character</string>
+
+    <!-- try again -->
+    <string name="try_again">Try again</string>
+    <string name="try_again_content">Oops…we have something wrong</string>
+</resources>

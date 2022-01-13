@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.RickMortyAndroidApp.MaterialCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/characterImage"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:contentDescription="@string/character"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Theme.RickMortyAndroidApp.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/appColorAdditional"
+            tools:text="Alive" />
+
+        <TextView
+            android:id="@+id/content"
+            style="@style/Theme.RickMortyAndroidApp.Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:maxLines="1"
+            android:textColor="@color/appColorBlack"
+            tools:text="Rick Sanchez" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

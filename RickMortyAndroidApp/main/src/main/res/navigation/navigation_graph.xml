@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/characterFragment">
+
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="io.github.brunogabriel.rickmorty.main.characters.presentation.fragment.CharactersFragment"
+        android:label="@string/nav_character"
+        tools:layout="@layout/fragment_characters" />
+
+    <fragment
+        android:id="@+id/locationsFragment"
+        android:name="io.github.brunogabriel.rickmorty.main.locations.presentation.fragment.LocationsFragment"
+        android:label="@string/nav_location"
+        tools:layout="@layout/fragment_locations" />
+
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="io.github.brunogabriel.rickmorty.main.episodes.presentation.fragment.EpisodesFragment"
+        android:label="@string/nav_location"
+        tools:layout="@layout/fragment_episodes" />
+
+</navigation>

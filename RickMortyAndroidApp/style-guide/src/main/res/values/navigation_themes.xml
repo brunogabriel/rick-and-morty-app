@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.RickMortyAndroidApp.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="materialThemeOverlay">
+            @style/ThemeOverlay.RickMortyAndroidApp.BottomNavigationView
+        </item>
+        <item name="itemTextColor">@color/bottom_navigation_selector</item>
+        <item name="itemIconTint">@color/bottom_navigation_selector</item>
+    </style>
+
+    <style name="ThemeOverlay.RickMortyAndroidApp.BottomNavigationView" parent="">
+        <item name="colorPrimary">@color/appColorWhite</item>
+        <item name="colorOnPrimary">@color/appColorPrimary</item>
+    </style>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.RickMortyAndroidApp.Toolbar.Light" parent="Widget.MaterialComponents.Toolbar">
+        <item name="titleTextColor">@color/appColorBlack</item>
+        <item name="titleTextAppearance">@style/Theme.RickMortyAndroidApp.LargeTitle</item>
+        <item name="android:minHeight">72dp</item>
+    </style>
+
+</resources>

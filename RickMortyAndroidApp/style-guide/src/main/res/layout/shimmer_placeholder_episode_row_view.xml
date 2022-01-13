@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/episodeSeasonText"
+        style="@style/Theme.RickMortyAndroidApp.Heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appColorShimmer"
+        android:textAllCaps="true"
+        android:textColor="@color/appColorBlack" />
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/Theme.RickMortyAndroidApp.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/appColorShimmer"
+        android:textAllCaps="true"
+        android:textColor="@color/appColorAdditional" />
+
+    <TextView
+        android:id="@+id/releaseText"
+        style="@style/Theme.RickMortyAndroidApp.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/appColorShimmer"
+        android:textAllCaps="true"
+        android:textColor="@color/appColorAdditional" />
+
+</LinearLayout>
