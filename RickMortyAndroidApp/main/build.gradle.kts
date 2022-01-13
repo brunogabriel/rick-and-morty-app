@@ -12,6 +12,7 @@ dependencies {
     implementation(project(Modules.network))
     implementation(project(Modules.styleGuide))
     implementation(project(Modules.deeplink))
+    implementation(project(Modules.testing))
 
     // dependencies
     dagger()
@@ -29,7 +30,5 @@ dependencies {
     implementation(Dependencies.lottie)
 
     // test dependencies
-    testImplementation(TestDependencies.junit)
-    androidTestImplementation(TestDependencies.androidxJunit)
-    androidTestImplementation(TestDependencies.espresso)
+    unitTest()
 }

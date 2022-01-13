@@ -1,7 +1,9 @@
 package io.github.brunogabriel.rickmorty.datalocal.data
 
-import androidx.room.*
-import io.github.brunogabriel.rickmorty.datalocal.data.models.CharacterEntity
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
 import io.github.brunogabriel.rickmorty.datalocal.data.models.LocationEntity
 
 @Dao
@@ -15,10 +17,4 @@ interface LocationDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(entities: List<LocationEntity>)
-
-    @Delete
-    fun delete(entity: LocationEntity)
-
-    @Update
-    fun update(entity: LocationEntity)
 }
