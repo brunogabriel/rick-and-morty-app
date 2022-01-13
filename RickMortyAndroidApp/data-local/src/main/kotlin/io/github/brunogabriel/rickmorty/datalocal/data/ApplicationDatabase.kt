@@ -13,7 +13,8 @@ import io.github.brunogabriel.rickmorty.datalocal.data.models.LocationEntity
         CharacterEntity::class,
         LocationEntity::class,
         EpisodeEntity::class],
-    version = 1
+    version = 1,
+    exportSchema = false
 )
 @TypeConverters(StringConverters::class)
 abstract class ApplicationDatabase : RoomDatabase() {

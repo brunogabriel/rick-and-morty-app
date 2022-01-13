@@ -55,6 +55,9 @@ class OnboardActivity : DaggerAppCompatActivity() {
                     is NavigationEvent.Url -> {
                         openUrl(event.url)
                     }
+                    else -> {
+                        // Do nothing
+                    }
                 }
             }
         }
