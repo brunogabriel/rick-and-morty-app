@@ -16,7 +16,6 @@ import io.github.brunogabriel.rickmorty.shared.extensions.hide
 import io.github.brunogabriel.rickmorty.shared.extensions.show
 import io.github.brunogabriel.rickmorty.shared.recyclerview.adapter.GenericItem
 import io.github.brunogabriel.rickmorty.shared.recyclerview.pagination.RecyclerPaginationListener
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -83,42 +82,45 @@ class EpisodesFragment : DaggerFragment() {
         lifecycleScope.launch {
             viewModel.episodeResult.collect { result ->
                 when (result) {
-                    is NetworkResult.Loading -> {
-                        binding.tryAgainView.hide()
-                        if (isFirstLoading) {
-                            binding.shimmerLayout.show()
-                        } else {
-                            recyclerViewAdapter.addLoading()
-                        }
-                    }
-
-                    is NetworkResult.Error -> {
-                        binding.shimmerLayout.hide()
-                        if (result.throwable is PaginationException) {
-                            loadedAllItems = true
-                            recyclerViewAdapter.removeLoadingOrTryAgain()
-                        } else {
-                            if (isFirstLoading) {
-                                binding.tryAgainView.show()
-                            } else {
-                                recyclerViewAdapter.addTryAgain()
-                            }
-                        }
-                    }
-
-                    is NetworkResult.Success -> {
-                        isFirstLoading = false
-                        binding.tryAgainView.hide()
-                        binding.shimmerLayout.hide()
-                        recyclerViewAdapter.addModels(GenericItem.View(result.data))
-                        page++
-                    }
-
+                    is NetworkResult.Loading -> treatLoadingEvent()
+                    is NetworkResult.Error -> treatErrorEvent(result)
+                    is NetworkResult.Success -> treatSuccessEvent(result)
                     is NetworkResult.None -> {
                         // Do nothing
                     }
                 }
             }
+        }
+    }
+
+    private fun treatSuccessEvent(result: NetworkResult.Success<List<Any>>) {
+        isFirstLoading = false
+        binding.tryAgainView.hide()
+        binding.shimmerLayout.hide()
+        recyclerViewAdapter.addModels(GenericItem.View(result.data))
+        page++
+    }
+
+    private fun treatErrorEvent(result: NetworkResult.Error) {
+        binding.shimmerLayout.hide()
+        if (result.throwable is PaginationException) {
+            loadedAllItems = true
+            recyclerViewAdapter.removeLoadingOrTryAgain()
+        } else {
+            if (isFirstLoading) {
+                binding.tryAgainView.show()
+            } else {
+                recyclerViewAdapter.addTryAgain()
+            }
+        }
+    }
+
+    private fun treatLoadingEvent() {
+        binding.tryAgainView.hide()
+        if (isFirstLoading) {
+            binding.shimmerLayout.show()
+        } else {
+            recyclerViewAdapter.addLoading()
         }
     }
 
