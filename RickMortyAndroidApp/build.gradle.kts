@@ -6,7 +6,6 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle:${Versions.gradle}")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
-//        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.0")
         classpath("org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}")
     }
 }
@@ -23,7 +22,7 @@ allprojects {
 fun Project.configureApplication() {
     when {
         name == "app" -> configureAppModule()
-        Modules.getAll().map { it.removePrefix(":") }.contains(name) -> configureSingleModule()
+        Modules.getAll().map { it.split(":").last() }.contains(name) -> configureSingleModule()
         else -> return
     }
 
