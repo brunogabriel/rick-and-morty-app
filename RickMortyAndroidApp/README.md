@@ -44,4 +44,4 @@ Hi, this is a project created using the challenge provided by  [Pixelwolf](https
 </p>
 
 ## LICENSE
-MIT © [MIT](LICENSE)
+MIT © [MIT](../LICENSE)

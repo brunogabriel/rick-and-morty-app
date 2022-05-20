@@ -1,0 +1,3 @@
+# rick-and-morty-app
+
+POCs using Rick and Morty API, soon news...
