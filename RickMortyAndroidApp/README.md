@@ -28,19 +28,19 @@ Hi, this is a project created using the challenge provided by  [Pixelwolf](https
 ## Showcase
 
 <p>
-    <img src="AndroidImages/1.png" width=200>
+    <img src="../AndroidImages/1.png" width=200>
 </p>
 
 <p>
-    <img src="AndroidImages/2.png" width=200>
+    <img src="../AndroidImages/2.png" width=200>
 </p>
 
 <p>
-    <img src="AndroidImages/3.png" width=200>
+    <img src="../AndroidImages/3.png" width=200>
 </p>
 
 <p>
-    <img src="AndroidImages/4.png" width=200>
+    <img src="../AndroidImages/4.png" width=200>
 </p>
 
 ## LICENSE
