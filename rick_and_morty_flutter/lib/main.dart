@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:rick_and_morty_flutter/main/presentation/page/main_page.dart';
 
-void main() {
+import 'injection.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await configureDependencies();
   runApp(const MyApp());
 }
 

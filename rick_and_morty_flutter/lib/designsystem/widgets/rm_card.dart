@@ -27,8 +27,16 @@ class RmCard extends StatelessWidget {
         topRight: Radius.circular(RMSpacing.insetMD.value),
       ),
       child: imageType == RMCardImageType.local
-          ? Image.asset(imagePath, fit: BoxFit.fitWidth, height: 140)
-          : Image.network(imagePath, fit: BoxFit.fitWidth, height: 140));
+          ? Image.asset(
+              imagePath,
+              fit: BoxFit.fill,
+              height: 160,
+            )
+          : Image.network(
+              imagePath,
+              fit: BoxFit.fill,
+              height: 160,
+            ));
 
   @override
   Widget build(BuildContext context) {

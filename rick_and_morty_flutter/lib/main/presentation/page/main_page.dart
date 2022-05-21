@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rick_and_morty_flutter/character/presentation/page/character_page.dart';
 import 'package:rick_and_morty_flutter/designsystem/constants/colors.dart';
 import 'package:rick_and_morty_flutter/designsystem/constants/styles.dart';
 
@@ -13,9 +14,7 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Character',
-    ),
+    CharacterPage(),
     Text(
       'Index 1: Location',
     ),
