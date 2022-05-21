@@ -66,10 +66,13 @@ class _CharacterState extends State<CharacterPage> {
       ),
       builderDelegate: PagedChildBuilderDelegate<CharacterResponse>(
         itemBuilder: (context, item, index) => RmCard(
-          title: item.name,
-          content: item.status,
+          title: item.status,
+          content: item.name,
           image: item.image,
           imageType: RMCardImageType.network,
+          onTap: () {
+            // Do nothing
+          },
         ),
       ),
     );
@@ -77,19 +80,19 @@ class _CharacterState extends State<CharacterPage> {
 
   @override
   Widget build(BuildContext context) {
-    return _buildGrid();
-    // return Column(
-    //   children: [
-    //     Padding(
-    //       padding: EdgeInsets.all(RMSpacing.insetMD.value),
-    //       child: const RMText(
-    //         text: 'Character',
-    //         style: RMTextStyle.large,
-    //         fontWeight: RMFontWeight.bold,
-    //       ),
-    //     ),
-    //     _buildGrid(),
-    //   ],
-    // );
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: EdgeInsets.all(RMSpacing.insetMD.value),
+          child: const RMText(
+            text: 'Character',
+            style: RMTextStyle.large,
+            fontWeight: RMFontWeight.bold,
+          ),
+        ),
+        Expanded(child: _buildGrid()),
+      ],
+    );
   }
 }

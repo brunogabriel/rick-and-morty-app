@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:rick_and_morty_flutter/character/presentation/page/character_page.dart';
 import 'package:rick_and_morty_flutter/designsystem/constants/colors.dart';
 import 'package:rick_and_morty_flutter/designsystem/constants/styles.dart';
@@ -48,6 +49,18 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          shadowColor: RMColor.white.value,
+          backgroundColor: RMColor.white.value,
+          surfaceTintColor: RMColor.white.value,
+          foregroundColor: RMColor.white.value,
+          systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: RMColor.white.value,
+            statusBarIconBrightness: Brightness.dark, // Android (dark icons)
+            statusBarBrightness: Brightness.light, // iOS (dark icons)
+          ),
+        ),
         body: _widgetOptions.elementAt(_selectedIndex),
         bottomNavigationBar: BottomNavigationBar(
           items: [

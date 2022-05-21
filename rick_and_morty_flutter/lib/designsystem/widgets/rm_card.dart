@@ -12,6 +12,7 @@ class RmCard extends StatelessWidget {
   final String content;
   final String? image;
   final RMCardImageType imageType;
+  final GestureTapCallback? onTap;
 
   const RmCard({
     super.key,
@@ -19,24 +20,29 @@ class RmCard extends StatelessWidget {
     required this.content,
     this.image,
     this.imageType = RMCardImageType.local,
+    this.onTap,
   });
 
-  Widget _buildImage(String imagePath) => ClipRRect(
-      borderRadius: BorderRadius.only(
-        topLeft: Radius.circular(RMSpacing.insetMD.value),
-        topRight: Radius.circular(RMSpacing.insetMD.value),
-      ),
-      child: imageType == RMCardImageType.local
-          ? Image.asset(
-              imagePath,
-              fit: BoxFit.fill,
-              height: 160,
-            )
-          : Image.network(
-              imagePath,
-              fit: BoxFit.fill,
-              height: 160,
-            ));
+  Widget _buildImage(BuildContext context, String imagePath) => ClipRRect(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(RMSpacing.insetMD.value),
+          topRight: Radius.circular(RMSpacing.insetMD.value),
+        ),
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          child: imageType == RMCardImageType.local
+              ? Image.asset(
+                  imagePath,
+                  fit: BoxFit.fitWidth,
+                  height: 160,
+                )
+              : Image.network(
+                  imagePath,
+                  fit: BoxFit.fitWidth,
+                  height: 160,
+                ),
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -47,29 +53,38 @@ class RmCard extends StatelessWidget {
         side: BorderSide(color: RMColor.gray5.value, width: 1),
         borderRadius: BorderRadius.circular(RMSpacing.insetMD.value),
       ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          imagePath.isNotEmpty
-              ? _buildImage(imagePath)
-              : const SizedBox.shrink(),
-          Padding(
-            padding: const EdgeInsets.all(12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RMText(text: title, style: RMTextStyle.caption11),
-                RMText(
-                  text: content,
-                  style: RMTextStyle.body17,
-                  fontWeight: RMFontWeight.bold,
-                )
-              ],
-            ),
-          )
-        ],
+      child: InkWell(
+        customBorder: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(RMSpacing.insetMD.value)),
+        onTap: onTap,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            imagePath.isNotEmpty
+                ? _buildImage(context, imagePath)
+                : const SizedBox.shrink(),
+            Padding(
+              padding: const EdgeInsets.all(12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  RMText(
+                    text: title,
+                    style: RMTextStyle.caption11,
+                    color: RMColor.gray1,
+                  ),
+                  RMText(
+                    text: content,
+                    style: RMTextStyle.body17,
+                    fontWeight: RMFontWeight.bold,
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
