@@ -14,6 +14,8 @@ CharacterResponse _$CharacterResponseFromJson(Map<String, dynamic> json) =>
       json['type'] as String,
       json['gender'] as String,
       json['image'] as String,
+      CharacterLocationResponse.fromJson(
+          json['location'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$CharacterResponseToJson(CharacterResponse instance) =>
@@ -24,6 +26,21 @@ Map<String, dynamic> _$CharacterResponseToJson(CharacterResponse instance) =>
       'type': instance.type,
       'gender': instance.gender,
       'image': instance.image,
+      'location': instance.location,
+    };
+
+CharacterLocationResponse _$CharacterLocationResponseFromJson(
+        Map<String, dynamic> json) =>
+    CharacterLocationResponse(
+      json['name'] as String,
+      json['url'] as String,
+    );
+
+Map<String, dynamic> _$CharacterLocationResponseToJson(
+        CharacterLocationResponse instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'url': instance.url,
     };
 
 CharacterApiResultResponse _$CharacterApiResultResponseFromJson(

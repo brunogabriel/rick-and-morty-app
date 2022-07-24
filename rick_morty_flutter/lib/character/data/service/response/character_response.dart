@@ -16,6 +16,7 @@ class CharacterResponse extends Equatable {
   final String type;
   final String gender;
   final String image;
+  final CharacterLocationResponse location;
 
   const CharacterResponse(
     this.id,
@@ -24,13 +25,29 @@ class CharacterResponse extends Equatable {
     this.type,
     this.gender,
     this.image,
+    this.location,
   );
 
   @override
-  List<Object> get props => [id, name, status, type, gender, image];
+  List<Object> get props => [id, name, status, type, gender, image, location];
 
   factory CharacterResponse.fromJson(Map<String, dynamic> json) =>
       _$CharacterResponseFromJson(json);
+}
+
+@immutable
+@JsonSerializable()
+class CharacterLocationResponse extends Equatable {
+  final String name;
+  final String url;
+
+  const CharacterLocationResponse(this.name, this.url);
+
+  @override
+  List<Object> get props => [name, url];
+
+  factory CharacterLocationResponse.fromJson(Map<String, dynamic> json) =>
+      _$CharacterLocationResponseFromJson(json);
 }
 
 @immutable
