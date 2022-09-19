@@ -7,6 +7,7 @@ buildscript {
         classpath("com.android.tools.build:gradle:${Versions.gradle}")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
         classpath("org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}")
+        classpath("com.spotify.ruler:ruler-gradle-plugin:${Versions.rule}")
     }
 }
 

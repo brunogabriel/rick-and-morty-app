@@ -1,0 +1,17 @@
+- identifier: io.github.brunogabriel.rickmorty.main.presentation.activity.MainActivity
+  owner: main-team
+
+- identifier: :app
+  owner: main-team
+
+- identifier: :data-local
+  owner: dba-team
+
+- identifier: :onboard
+  owner: experience-team
+
+- identifier: :style-guide
+  owner: experience-team
+
+- identifier: :style-guide
+  owner: qa-team
