@@ -36,11 +36,11 @@ All the data is on [Rick and Morty API](https://rickandmortyapi.com/). Use this 
 </p>
 
 <p>
-    <img src="../AndroidImages/3.png" width=200>
+    <img src="./AndroidImages/3.png" width=200>
 </p>
 
 <p>
-    <img src="../AndroidImages/4.png" width=200>
+    <img src="./AndroidImages/4.png" width=200>
 </p>
 
 ## LICENSE
