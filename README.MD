@@ -28,11 +28,11 @@ All the data is on [Rick and Morty API](https://rickandmortyapi.com/). Use this 
 ## Showcase
 
 <p>
-    <img src="../AndroidImages/1.png" width=200>
+    <img src="./AndroidImages/1.png" width=200>
 </p>
 
 <p>
-    <img src="../AndroidImages/2.png" width=200>
+    <img src="./AndroidImages/2.png" width=200>
 </p>
 
 <p>
